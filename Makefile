@@ -1,9 +1,9 @@
 APP=$(shell basename $(shell git rev-parse --show-toplevel))
-REGISTRY=gcr.io/diesel-post-215810
+REGISTRY=vdubovets
 VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
 GO_BUILD=go build -v -o kbot -ldflags "-X="github/mfcmaestro/kbot/cmd.appVersion=${VERSION}
 
-TARGETOS=windows #linux darwin windows
+TARGETOS=linux #linux darwin windows
 TARGETARCH=amd64 #amd64 arm64
 
 format:
