@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: action/checkout@V3
+        uses: actions/checkout@V3
 
       - name: Run test
         run: make test
