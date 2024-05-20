@@ -6,7 +6,7 @@ replicaCount: 1
 image:
   registry: "ghcr.io"
   repository: "mfcmaestro/kbot"
-  tag: "v1.0.7-e48c013"
+  tag: "v1.0.7-829000c"
   os: "linux"
   arch: "amd64"
 secret:
