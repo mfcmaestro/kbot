@@ -5,7 +5,7 @@
 replicaCount: 1
 image:
   registry: "ghcr.io"
-  repository: "diesel-post-215810/kbot"
+  repository: "mfcmaestro/kbot"
   tag: "v1.0.7-e48c013"
   os: "linux"
   arch: "amd64"
