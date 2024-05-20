@@ -8,7 +8,7 @@ image:
   repository: "diesel-post-215810/kbot"
   tag: "v1.0.7-5fb9748"
   os: "linux"
-  arch: ""
+  arch: "amd64"
 secret:
   name: "kbot"
   env: "TELE_TOKEN"
