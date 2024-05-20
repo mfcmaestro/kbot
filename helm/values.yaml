@@ -4,9 +4,11 @@
 
 replicaCount: 1
 image:
-  repository: vdubovets
-  tag: v1.0.7-07ac09a
-  arch: ""
+  registry: "ghcr.io"
+  repository: "diesel-post-215810/kbot"
+  tag: "v1.0.7-07ac09a"
+  os: "linux"
+  arch: "amd64"
 secret:
   name: "kbot"
   env: "TELE_TOKEN"

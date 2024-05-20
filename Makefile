@@ -1,10 +1,10 @@
 APP=$(shell basename $(shell git rev-parse --show-toplevel))
-REGISTRY=vdubovets
+REGISTRY=gcr.io/diesel-post-215810/kbot
 VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
 GO_BUILD=go build -v -o kbot -ldflags "-X="github/mfcmaestro/kbot/cmd.appVersion=${VERSION}
 
-TARGETOS=linux #linux darwin windows
-TARGETARCH=amd64 #amd64 arm64
+TARGETOS=linux
+TARGETARCH=amd64
 
 format:
 	gofmt -s -w ./
@@ -37,7 +37,7 @@ darwin: format get
 	CGO_ENABLED=0 GOOS=darwin GOARCH=${TARGETARCH} ${GO_BUILD}
 
 image:
-	docker build --build-arg TARGETOS=${TARGETOS} --build-arg TARGETARCH=${TARGETARCH} . -t ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
+	docker build --build-arg TARGETOS=${TARGETOS} --build-arg TARGETARCH=${TARGETARCH} -t ${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH} .
 
 push:
 	docker push ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
