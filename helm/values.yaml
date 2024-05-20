@@ -6,9 +6,9 @@ replicaCount: 1
 image:
   registry: "ghcr.io"
   repository: "diesel-post-215810/kbot"
-  tag: "v1.0.7-07ac09a"
+  tag: "v1.0.7-5fb9748"
   os: "linux"
-  arch: "amd64"
+  arch: ""
 secret:
   name: "kbot"
   env: "TELE_TOKEN"
