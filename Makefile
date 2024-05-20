@@ -1,5 +1,5 @@
 APP=$(shell basename $(shell git rev-parse --show-toplevel))
-REGISTRY=gcr.io/diesel-post-215810/kbot
+REGISTRY=gcr.io/diesel-post-215810
 VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
 GO_BUILD=go build -v -o kbot -ldflags "-X="github/mfcmaestro/kbot/cmd.appVersion=${VERSION}
 
