@@ -5,7 +5,7 @@
 replicaCount: 1
 image:
   repository: vdubovets
-  tag: v1.0.7-f6b2d29
+  tag: v1.0.7-2f29ec4
   arch: ""
 secret:
   name: "kbot"
